@@ -1,0 +1,23 @@
+schema=st
+schemaSt=StructType([
+                    StructField("activity_period", StringType(), False)
+                    ,StructField("activity_period_start_dateS", StringType(), False)
+                    ,StructField("operating_airline", StringType(), False)
+                    ,StructField("operating_airline_iata_code", StringType(), False)
+                    ,StructField("published_airline", StringType(), False)
+                    ,StructField("published_airline_iata_code", StringType(), False)	
+                    ,StructField("geo_summary", StringType(), False)
+                    ,StructField("geo_region", StringType(), False)
+                    ,StructField("landing_aircraft_type", StringType(), False)
+                    ,StructField("aircraft_body_type", StringType(), False)
+                    ,StructField("aircraft_manufacturer", StringType(), False)
+                    ,StructField("aircraft_model", StringType(), False)
+                    ,StructField("aircraft_version", StringType(), False)
+                    ,StructField("landing_vount", StringType(), False)
+                    ,StructField("total_landed_weight", StringType(), False)
+                    ,StructField("data_as_of", StringType(), False)
+                    ,StructField("data_loaded_at", StringType(), False)
+                ]
+) 
+df=spark.read.format('CSV').schema(schemaSt).load('dbfs:/FileStore/tables/Air_Traffic_Landings_Statistics.csv')
+df.show(10)
