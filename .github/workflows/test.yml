@@ -17,4 +17,4 @@ jobs:
         distribution: 'temurin'
     - run: pip install pytest pyspark
     - run: pip install pytest pyspark pandas
-    - run: pytest
+    - run: pytest TestCases/TestValidations.py -v
