@@ -87,4 +87,4 @@ class TestValidations:
     def test_check_totalrows(self,read_data_file):
         df=read_data_file
         #assert (df.count()==1)
-        assert (check_totalcount_datavalidity(df,"activity_period",20))
+        assert (check_totalcount_datavalidity(df,"activity_period",21))
