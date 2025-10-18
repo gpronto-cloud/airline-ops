@@ -16,4 +16,5 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
     - run: pip install pytest pyspark
+    - run: pip install pytest pyspark pandas
     - run: pytest
