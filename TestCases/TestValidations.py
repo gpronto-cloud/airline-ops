@@ -1,7 +1,7 @@
 import pytest
 from pyspark.sql import SparkSession
-from airline_ops.validations.validations import check_null_value
-from airline_ops.validations.validations import check_totalcount_datavalidity
+from validations.validations import check_null_value
+from validations.validations import check_totalcount_datavalidity
 from pyspark.sql.types import StructType
 from pyspark.sql.types import StructField
 from pyspark.sql.types import StringType
